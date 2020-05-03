@@ -71,59 +71,63 @@ nav {
 	background-color: #212529;
 }
 
-.banner {
-	background-image: url('http://www.hd-freewallpapers.com/latest-wallpapers/abstract-website-backgrounds.jpg');
-	text-align: center;
-	color: #fff;
 
-	background-repeat: no-repeat;
-	background-attachment: scroll;
-	background-position: center center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+.transition-timer-carousel .carousel-caption {
+    background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 4%, rgba(0,0,0,0.5) 32%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(4%,rgba(0,0,0,0.1)), color-stop(32%,rgba(0,0,0,0.5)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.1) 4%,rgba(0,0,0,0.5) 32%,rgba(0,0,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+	width: 100%;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	text-align: left;
+	padding-top: 5px;
+	padding-left: 15%;
+	padding-right: 15%;
 }
 
-.banner-text {
-	padding: 200px 0 150px 0;
+.transition-timer-carousel .carousel-caption .carousel-caption-header {
+	margin-top: 10px;
+	font-size: 24px;
 }
 
-.banner-heading {
-	font-family: 'Lobster', cursive;
-	font-size: 75px;
-	font-weight: 700;
-	line-height: 100px;
-	margin-bottom: 30px;
-	color: #fff;
-}
 
-.banner-sub-heading {
-	font-family: 'Libre Baskerville', serif;
-	font-size: 30px;
-	font-weight: 300;
-	line-height: 30px;
-	margin-bottom: 50px;
-	color: #fff;
+@media (min-width: 970px) {
+    /* Lower the font size of the carousel caption header so that our caption
+    doesn't take up the full image/slide on smaller screens */
+	.transition-timer-carousel .carousel-caption .carousel-caption-header {
+		font-size: 36px;
+	}
 }
-
-.btn-banner {
-	padding: 5px 20px;
-	border-radius: 10px;
-	font-weight: 700;
-	line-height: 1.5;
-	text-align: center;
-	color: #fff;
-	text-transform: uppercase;
+.transition-timer-carousel .carousel-indicators {
+	bottom: 0px;
+	margin-bottom: 5px;
 }
-
-.text-intro {
-	width: 90%;
-	margin: auto;
-	text-align: center;
-	padding-top: 30px;
+.transition-timer-carousel .carousel-control {
+	z-index: 11;
 }
-
+.transition-timer-carousel .transition-timer-carousel-progress-bar {
+    height: 5px;
+    background-color:#084596;
+    width: 0%;
+    margin: -5px 0px 0px 0px;
+    border: none;
+    z-index: 11;
+    position: relative;
+}
+.transition-timer-carousel .transition-timer-carousel-progress-bar.animate{
+    /* We make the transition time shorter to avoid the slide transitioning
+    before the timer bar is "full" - change the 4.25s here to fit your
+    carousel's transition time */
+    -webkit-transition: width 4.25s linear;
+	-moz-transition: width 4.25s linear;
+	-o-transition: width 4.25s linear;
+	transition: width 4.25s linear;
+}
 
 /* mobile view */
 @media (max-width:500px) {
@@ -141,34 +145,10 @@ nav {
 		font-weight: 500;
 	}
 
-	.banner-text {
-		padding: 150px 0 150px 0;
-	}
 
-	.banner-heading {
-		font-size: 30px;
-		line-height: 30px;
-		margin-bottom: 20px;
-	}
-
-	.banner-sub-heading {
-		font-size: 10px;
-		font-weight: 200;
-		line-height: 10px;
-		margin-bottom: 40px;
-	}
 
 }
 
 @media (max-width:768px) {
-	.banner-text {
-		padding: 150px 0 150px 0;
-	}
 
-	.banner-sub-heading {
-		font-size: 23px;
-		font-weight: 200;
-		line-height: 23px;
-		margin-bottom: 40px;
-	}
 }

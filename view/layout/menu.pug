@@ -1,0 +1,23 @@
+nav#banner.navbar.navbar-expand-md.navbar-dark.fixed-top
+    .container
+        a.navbar-brand(href='#')
+            span Logo
+            |  Here
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#collapsibleNavbar')
+            span.navbar-toggler-icon
+        
+        #collapsibleNavbar.collapse.navbar-collapse
+            ul.navbar-nav.ml-auto
+                li.nav-item
+                    a.nav-link(href='#') Link
+                li.nav-item
+                    a.nav-link(href='#') Link
+                li.nav-item
+                    a.nav-link(href='#') Link
+                li.nav-item.dropdown
+                    a#navbardrop.nav-link.dropdown-toggle(href='#', data-toggle='dropdown')
+                        | Dropdown link
+                    .dropdown-menu
+                        a.dropdown-item(href='#') Link 1
+                        a.dropdown-item(href='#') Link 2
+                        a.dropdown-item(href='#') Link 3

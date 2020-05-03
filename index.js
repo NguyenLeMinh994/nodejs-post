@@ -18,8 +18,8 @@ app.set('views','./view');
 // Import Route
 const authAPIRoute = require('./routes/api/auth');
 const postAPIRoute = require('./routes/api/posts');
-
 const postRoute = require('./routes/posts');
+const homeRoute = require('./routes/home');
 
 // Middleware
 app.use(express.json());
@@ -29,6 +29,7 @@ app.use('/public', express.static(path.join(__dirname, 'public')))
 app.use('/api/user',authAPIRoute);
 app.use('/api/posts',postAPIRoute);
 app.use('/posts',postRoute);
+app.use('/',homeRoute);
 
 // app.use('/posts',);
 
